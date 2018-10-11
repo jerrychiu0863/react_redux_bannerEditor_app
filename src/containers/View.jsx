@@ -5,10 +5,10 @@ import './View.css';
 
 const View = () => {
     const state = store.getState();
-    const { color, fontSizeValue } = state;
+    const { color, fontSizeValue, colorDegree } = state;
     const h1Style = {
           fontSize: `${fontSizeValue}px`,
-          backgroundImage: `linear-gradient(45deg, ${color[0]}, ${color[1]})`,
+          backgroundImage: `linear-gradient(${colorDegree}deg, ${color[0]}, ${color[1]})`,
           height: "500px"
     }
     

@@ -1,7 +1,9 @@
 const constants = {
     SET_FIRST_COLOR: "SET_FIRST_COLOR",
     SET_SECOND_COLOR: "SET_SECOND_COLOR",
-    SET_FONT_SIZE: "  SET_FONT_SIZE"
+    SET_COLOR_DEGREE: "SET_COLOR_DEGREE",
+    SET_FONT_SIZE: "SET_FONT_SIZE",
+    SET_FONT_COLOR: "SET_FONT_COLOR"
 }
 
 export default constants;

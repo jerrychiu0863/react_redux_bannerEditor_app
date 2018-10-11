@@ -1,0 +1,12 @@
+.Color {
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 10px;
+}
+
+.Color__header {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
