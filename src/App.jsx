@@ -4,7 +4,7 @@ import store from './store';
 
 import './App.css';
 import View from './containers/View';
-import Editor from './components/Editor';
+import SideBar from './components/SideBar';
 
 class App extends Component {
   constructor(props) {
@@ -17,13 +17,13 @@ class App extends Component {
     
   render() {
     const state = store.getState();
-
+    console.log(state);
 
     return (
       <div className="App">
        
         <View />
-        <Editor />
+        <SideBar />
         
       </div>
     );

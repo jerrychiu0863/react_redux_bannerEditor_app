@@ -28,11 +28,18 @@ const Color = ({firstColor, secondColor, colorDegree}) => {
            <div className="Color__header">
                <p>Color</p>
            </div>
-            <input type="color" value={firstColor} onChange={setFirstColorValue} />
-            <input type="color" value={secondColor} onChange={setSecondColorValue}/> 
-            <select value={colorDegree} onChange={setColorDegreeValue}>
+           <div>
+               <p>Color: <input type="color" value={firstColor} onChange={setFirstColorValue} />
+                <input type="color" value={secondColor} onChange={setSecondColorValue}/> 
+               </p>
+           </div>
+           <div>
+                <p>Degree: <select value={colorDegree} onChange={setColorDegreeValue}>
                 {colorDegrees.map( c => <option key={c} value={c}>{c}</option>)}
-            </select>
+                </select>
+                </p>
+           </div>
+            
         </div>
     );
 }

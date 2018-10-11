@@ -5,7 +5,8 @@ import './List.css';
 const List = () => {
     return(
         <div className="List">
-            <button>List</button>
+            <button><i className="fas fa-bookmark"></i>
+            </button>
         </div>
     );
 }

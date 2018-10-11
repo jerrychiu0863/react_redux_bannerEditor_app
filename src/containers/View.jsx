@@ -5,16 +5,18 @@ import './View.css';
 
 const View = () => {
     const state = store.getState();
-    const { color, fontSizeValue, colorDegree } = state;
+    const { color, fontSizeValue, colorDegree, typing } = state;
     const h1Style = {
           fontSize: `${fontSizeValue}px`,
           backgroundImage: `linear-gradient(${colorDegree}deg, ${color[0]}, ${color[1]})`,
-          height: "500px"
+          height: "500px",
+          textAlign: "center"
     }
     
     return(
         <div className="View">
-             <h1 style={h1Style}>Hello World!</h1>
+             <h1 style={h1Style}>{typing}</h1>
+
         </div>
     );
 }

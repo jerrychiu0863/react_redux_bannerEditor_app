@@ -19,3 +19,8 @@ export const setFontSize = value => ({
     type: C.SET_FONT_SIZE,
     payload: value
 })
+
+export const setTyping = value => ({
+    type: C.SET_TYPING,
+    payload: value
+})
