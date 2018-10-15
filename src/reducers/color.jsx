@@ -8,6 +8,9 @@ export default function color(state=["#005aa7", "#fffde4"], action) {
         case C.SET_SECOND_COLOR:
             return [state[0], action.payload]
             
+        case C.RESET:
+            return ["#005aa7", "#fffde4"]
+            
         default: 
             return state;
     }

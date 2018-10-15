@@ -1,21 +1,36 @@
 import React from 'react';
 
 import store from '../store';
-import { setFontSize } from '../actions';
-import {fontSizes} from '../static-data';
+import { setFontSize, setFontColor, setFontFamily } from '../actions';
+import { fontSizes, fontFamilies } from '../static-data';
 import './Font.css';
 
-const Font = ({fontSizeValue}) => {
+const Font = ({fontSizeValue, fontColorValue, fontFamilyValue}) => {
     
     const setFontSizeValue = (e) => {
         store.dispatch(setFontSize(e.target.value));
      
     }
     
+    const setFontColorValue = e => {
+        store.dispatch(setFontColor(e.target.value));
+    }
+    
+    const setFontFamilyValue = e => {
+        store.dispatch(setFontFamily(e.target.value))
+    }
+    
     return(
         <div className="Font">
            <div className="Font__header">
                <p>Font</p>
+           </div>
+           <div>
+               <p>Font: 
+                  <select onChange={setFontFamilyValue} value={fontFamilyValue}>
+                   {fontFamilies.map( f => <option key={f} value={f}>{f}</option>)}
+                  </select>
+              </p>
            </div>
            <div>
                <p>Size: 
@@ -26,7 +41,7 @@ const Font = ({fontSizeValue}) => {
            </div>
            <div>
                <p>Color:  
-                   <input type="color" />
+                   <input type="color" onChange={setFontColorValue} value={fontColorValue} />
               </p>
            </div>
             

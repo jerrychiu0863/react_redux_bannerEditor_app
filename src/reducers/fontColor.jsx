@@ -1,14 +1,14 @@
 import C from '../constants/action-types';
 
-export default function fontSize(state='8', action) {
+export default function fontColor(state='#000000', action) {
     switch(action.type) {
-        case C.SET_FONT_SIZE:
+        case C.SET_FONT_COLOR:
             return action.payload
             
         case C.RESET:
-            return '8'
+            return "#000000"
             
         default:
-            return state;
+            return state
     }
-} 
+}

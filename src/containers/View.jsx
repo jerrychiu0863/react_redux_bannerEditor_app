@@ -5,12 +5,15 @@ import './View.css';
 
 const View = () => {
     const state = store.getState();
-    const { color, fontSizeValue, colorDegree, typing } = state;
+    const { color, fontSizeValue, colorDegree, typing, fontColor, fontFamily } = state;
     const h1Style = {
           fontSize: `${fontSizeValue}px`,
-          backgroundImage: `linear-gradient(${colorDegree}deg, ${color[0]}, ${color[1]})`,
+          backgroundImage: `linear-gradient(-${colorDegree}deg, ${color[0]}, ${color[1]})`,
           height: "500px",
-          textAlign: "center"
+          textAlign: "center",
+          color: `${fontColor}`,
+          fontFamily: `${fontFamily}`,
+          overflow: "auto"
     }
     
     return(

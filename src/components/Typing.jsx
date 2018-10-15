@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { setTyping } from '../actions';
+import { setTyping, clearTyping } from '../actions';
 import store from '../store';
 import './Typing.css';
 
@@ -10,12 +10,19 @@ const Typing = ({value}) => {
         store.dispatch(setTyping(e.target.value))
     }
     
+    const clearTypingValue = () => {
+        store.dispatch(clearTyping());
+    }
+    
     return(
         <div className="Typing">
            <div className="Typing__header">
                <p>Text</p>
            </div>
-            <input type="text" value={value} onChange={setTypingValue} />
+            <textarea type="text" value={value} onChange={setTypingValue} style={{height: "50px", width: "180px", resize: "none", marginTop: "5px"}}></textarea>
+            <div>
+                <button onClick={clearTypingValue}>Clear Text</button>
+            </div>
         </div>
     );
 }

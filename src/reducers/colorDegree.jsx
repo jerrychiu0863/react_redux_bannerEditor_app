@@ -5,7 +5,10 @@ export default function colorDegree(state='0', action) {
         case C.SET_COLOR_DEGREE:
             return action.payload
             
+        case C.RESET:
+            return '0'
+            
         default:
-            return state;
+            return state
     }
 }

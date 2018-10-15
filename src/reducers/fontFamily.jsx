@@ -1,14 +1,14 @@
 import C from '../constants/action-types';
 
-export default function fontSize(state='8', action) {
+export default function fontFamil(state='Lato', action) {
     switch(action.type) {
-        case C.SET_FONT_SIZE:
+        case C.SET_FONT_FAMILY:
             return action.payload
             
         case C.RESET:
-            return '8'
+            return 'Lato'
             
         default:
-            return state;
+            return state
     }
-} 
+}

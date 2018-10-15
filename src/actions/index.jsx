@@ -1,4 +1,5 @@
 import C from '../constants/action-types';
+import cuid from 'cuid';
 
 export const setFirstColor = value => ({
     type: C.SET_FIRST_COLOR,
@@ -20,7 +21,42 @@ export const setFontSize = value => ({
     payload: value
 })
 
+export const setFontFamily = value => ({
+    type: C.SET_FONT_FAMILY,
+    payload: value
+})
+
 export const setTyping = value => ({
     type: C.SET_TYPING,
     payload: value
+})
+
+export const setFontColor = value => ({
+    type: C.SET_FONT_COLOR,
+    payload: value
+})
+
+export const clearTyping = () => ({
+    type: C.CLEAR_TYPING,
+    payload: ''
+})
+
+export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, typing, date, id) => ({
+    type: C.SAVE_DESIGN,
+    payload: {
+        color,
+        colorDegree,
+        fontFamily,
+        fontSize,
+        fontColor,
+        typing,
+        date,
+        id: cuid()
+
+    }
+})
+
+export const resetDesign = () => ({
+    type: C.RESET,
+    payload: ''
 })
