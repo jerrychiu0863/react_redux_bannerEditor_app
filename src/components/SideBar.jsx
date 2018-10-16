@@ -1,5 +1,5 @@
 import React from 'react';
-import List from './List';
+import SideBarHead from './SideBarHead';
 import Color from './Color';
 import Font from './Font';
 import Typing from './Typing';
@@ -42,12 +42,12 @@ const SideBar = () => {
     
     return(
         <div>
-            <List />
+            <SideBarHead />
             <Color firstColor={color[0]} secondColor={color[1]} colorDegree={colorDegree} />
             <Font fontSizeValue={fontSizeValue} fontColorValue={fontColor} fontFamilyValue={fontFamily}/>
             <Typing value={typing}/>
             <div>
-               <button onClick={onSaveDesign}>SAVE</button>
+               <button onClick={onSaveDesign} className="btn">SAVE</button>
                <button onClick={reset}>RESET</button> 
             </div>
             

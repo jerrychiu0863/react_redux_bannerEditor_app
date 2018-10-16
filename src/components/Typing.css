@@ -8,4 +8,9 @@
 .Typing__header {
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 5px;
+}
+
+.Typing__header p {
+    margin-bottom: 0;
 }

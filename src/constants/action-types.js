@@ -8,7 +8,8 @@ const constants = {
     SET_TYPING: " SET_TYPING",
     CLEAR_TYPING: "CLEAR_TYPING",
     RESET: "RESET",
-    SAVE_DESIGN: "SAVE_DESIGN"
+    SAVE_DESIGN: "SAVE_DESIGN",
+    SET_MODEL: "SET_MODEL"
 }
 
 export default constants;

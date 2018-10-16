@@ -5,6 +5,7 @@ import typing from './typing';
 import fontColor from './fontColor';
 import fontFamily from './fontFamily';
 import colorLists from './colorLists';
+import isModelOpen from './model';
 
 import { combineReducers } from 'redux';
 
@@ -15,5 +16,6 @@ export default combineReducers({
     typing,
     fontColor,
     fontFamily,
-    colorLists
+    colorLists,
+    isModelOpen
 });

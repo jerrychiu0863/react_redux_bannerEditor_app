@@ -41,7 +41,7 @@ export const clearTyping = () => ({
     payload: ''
 })
 
-export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, typing, date, id) => ({
+export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, typing, date) => ({
     type: C.SAVE_DESIGN,
     payload: {
         color,
@@ -51,12 +51,17 @@ export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, 
         fontColor,
         typing,
         date,
-        id: cuid()
-
+        id: cuid(),
+        timestamp: new Date().toString()
     }
 })
 
 export const resetDesign = () => ({
     type: C.RESET,
+    payload: ''
+})
+
+export const setModel = () => ({
+    type: C.SET_MODEL,
     payload: ''
 })

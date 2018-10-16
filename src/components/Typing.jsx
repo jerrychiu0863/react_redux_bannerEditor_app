@@ -19,7 +19,7 @@ const Typing = ({value}) => {
            <div className="Typing__header">
                <p>Text</p>
            </div>
-            <textarea type="text" value={value} onChange={setTypingValue} style={{height: "50px", width: "180px", resize: "none", marginTop: "5px"}}></textarea>
+            <textarea type="text" value={value} onChange={setTypingValue} style={{height: "50px", width: "180px", resize: "none"}}></textarea>
             <div>
                 <button onClick={clearTypingValue}>Clear Text</button>
             </div>
