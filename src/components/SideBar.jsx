@@ -16,13 +16,13 @@ const SideBar = () => {
           const date = new Date();
           let year = date.getFullYear();
           const monthNames = [
-                                "January", "February", 
-                                "March", 
-                                "April", 
+                                "Jan.", "Feb.", 
+                                "Mar.", 
+                                "Apr.", 
                                 "May", 
                                 "June",
                                 "July", 
-                                "August", "September", "October", "November", "December"
+                                "Aug.", "Sept.", "Oct.", "Nov.", "Dec."
                             ];
           let day = date.getDate();
           return { 
