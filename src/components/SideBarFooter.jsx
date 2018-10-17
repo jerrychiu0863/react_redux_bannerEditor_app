@@ -1,20 +1,17 @@
 import React from 'react';
-import SideBarHead from './SideBarHead';
-import Color from './Color';
-import Font from './Font';
-import Typing from './Typing';
-
-import { resetDesign, saveDesign } from '../actions';
 import store from '../store';
+import { resetDesign, saveDesign } from '../actions';
 
-const SideBar = () => {
+import './SideBarFooter.css';
+
+const SideBarFooter = () => {
     
     const state = store.getState();
     const {fontSizeValue, color, colorDegree, typing, fontColor, fontFamily} = state;
     
     const getDate = () => {
           const date = new Date();
-          let year = date.getFullYear();
+          const year = date.getFullYear();
           const monthNames = [
                                 "Jan.", "Feb.", 
                                 "Mar.", 
@@ -24,10 +21,20 @@ const SideBar = () => {
                                 "July", 
                                 "Aug.", "Sept.", "Oct.", "Nov.", "Dec."
                             ];
-          let day = date.getDate();
+          
+           const getDay = () => {
+               const day = date.getDate();
+               
+               if(day < 10) {
+               return `0${day}`
+                } else {
+               return day
+                }
+           }
+           
           return { 
                   month: `${monthNames[date.getMonth()]}`,
-                  day: `${day}`, 
+                  day: getDay(), 
                   year: `${year}`
                  }
     }
@@ -41,18 +48,11 @@ const SideBar = () => {
     }
     
     return(
-        <div>
-            <SideBarHead />
-            <Color firstColor={color[0]} secondColor={color[1]} colorDegree={colorDegree} />
-            <Font fontSizeValue={fontSizeValue} fontColorValue={fontColor} fontFamilyValue={fontFamily}/>
-            <Typing value={typing}/>
-            <div>
-               <button onClick={onSaveDesign} className="btn">SAVE</button>
-               <button onClick={reset}>RESET</button> 
-            </div>
-            
+         <div className="SideBarFooter">
+           <button onClick={onSaveDesign} className="btn btn-primary btn-sm mr-2">SAVE</button>
+           <button onClick={reset} className="btn btn-outline-primary btn-sm">RESET</button> 
         </div>
-    );
+    );  
 }
 
-export default SideBar;
+export default SideBarFooter;

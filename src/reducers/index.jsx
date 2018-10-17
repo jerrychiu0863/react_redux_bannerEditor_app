@@ -6,6 +6,7 @@ import fontColor from './fontColor';
 import fontFamily from './fontFamily';
 import colorLists from './colorLists';
 import isModelOpen from './model';
+import activeColorList from './activeColorList';
 
 import { combineReducers } from 'redux';
 
@@ -17,5 +18,6 @@ export default combineReducers({
     fontColor,
     fontFamily,
     colorLists,
-    isModelOpen
+    isModelOpen,
+    activeColorList
 });

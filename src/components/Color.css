@@ -15,3 +15,16 @@
 .Color__header p {
     margin-bottom: 0;
 }
+
+.Color__label {
+    margin: 0 0 5px 0;
+}
+
+.Color__label input[type="color"] {
+    margin-left: 3px;
+}
+
+.Color__label select {
+    font-size: 12px;
+    margin-left: 3px;
+}

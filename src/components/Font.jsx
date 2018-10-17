@@ -22,30 +22,37 @@ const Font = ({fontSizeValue, fontColorValue, fontFamilyValue}) => {
     
     return(
         <div className="Font">
+          
            <div className="Font__header">
                <p>Font</p>
            </div>
            <div>
-               <p>Font: 
-                  <select onChange={setFontFamilyValue} value={fontFamilyValue}>
-                   {fontFamilies.map( f => <option key={f} value={f}>{f}</option>)}
+               <p className="Font__label">Font: 
+                  <select 
+                      onChange={setFontFamilyValue} value={fontFamilyValue}>
+                      {fontFamilies.map( f => <option key={f} value={f}>{f}</option>)}
                   </select>
               </p>
            </div>
            <div>
-               <p>Size: 
-                  <select onChange={setFontSizeValue} value={fontSizeValue}>
-                   {fontSizes.map( f => <option key={f} value={f}>{f}</option>)}
+               <p className="Font__label">Size: 
+                  <select 
+                      onChange={setFontSizeValue} 
+                      value={fontSizeValue}
+                   >
+                     {fontSizes.map( f => <option key={f} value={f}>{f}</option>)}
                   </select>
               </p>
            </div>
            <div>
-               <p>Color:  
-                   <input type="color" onChange={setFontColorValue} value={fontColorValue} />
+               <p className="Font__label">Color:  
+                   <input 
+                       type="color" 
+                       onChange={setFontColorValue} value={fontColorValue} 
+                   />
               </p>
            </div>
             
-    
         </div>
     );
 }

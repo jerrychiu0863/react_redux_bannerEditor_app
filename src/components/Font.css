@@ -16,3 +16,16 @@
 .Font__header p {
     margin-bottom: 0;
 }
+
+.Font__label {
+    margin: 0 0 5px 0;
+}
+
+.Font__label select {
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.Font__label input[type="color"] {
+    margin-left: 3px;
+}

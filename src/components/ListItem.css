@@ -1,7 +1,6 @@
 .ListItem {
     display: flex;
     height: 100px;
-    background-color: #fff;
     border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
@@ -16,6 +15,7 @@
 
 .ListItem__right {
     width: 75%;
+    height: 101.5%;
 }
 
 /**********************************************/

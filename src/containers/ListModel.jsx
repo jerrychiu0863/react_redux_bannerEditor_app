@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItem from '../components/ListItem';
+import ListView from '../components/ListView';
 import store from '../store';
 import { setModel } from '../actions';
 
@@ -7,7 +8,7 @@ import './ListModel.css';
 
 const ListModel = ({isModelOpen}) => {
     const state = store.getState();
-    const {colorLists} = state;
+    const {colorLists, activeColorList} = state;
     
     const getClassName = value => {
         let className = "ListModel "
@@ -27,13 +28,13 @@ const ListModel = ({isModelOpen}) => {
     return(
         <div className={getClassName(isModelOpen)}>
             <div className="ListModel__content">
-            <div className="ListModel__content--left">
-                  {colorLists.map( c => <ListItem colorList={c} key={c.id} />)}
-            </div>
+                <div className="ListModel__content--left">
+                      {colorLists.map( c => <ListItem colorList={c} key={c.id} />)}
+                </div>
             <div className="ListModel__content--right">
-                
+                <ListView activeList={activeColorList} />
             </div>
-             <button onClick={() => closeModel()}>X</button>
+             <button onClick={() => closeModel()} className="ListModel__btn">X</button>
             </div>
         </div>
     );

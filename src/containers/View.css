@@ -1,10 +1,22 @@
 .View {
     width: 50%;
-    height: 500px;
+    height: 600px;
     margin-right: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: #fff; 
 }
 
-textarea {
-    width: 500px;
-    height: 800px;
+.View__header {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 5px;
+}
+
+.View__header p {
+    margin-bottom: 0px;
+}
+
+h1 {
+    padding: 50% 0 ;
 }

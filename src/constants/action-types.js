@@ -9,7 +9,8 @@ const constants = {
     CLEAR_TYPING: "CLEAR_TYPING",
     RESET: "RESET",
     SAVE_DESIGN: "SAVE_DESIGN",
-    SET_MODEL: "SET_MODEL"
+    SET_MODEL: "SET_MODEL",
+    ACTIVE_COLOR_LIST: "ACTIVE_COLOR_LIST"
 }
 
 export default constants;

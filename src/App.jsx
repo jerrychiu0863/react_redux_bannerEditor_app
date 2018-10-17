@@ -4,7 +4,7 @@ import store from './store';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import View from './containers/View';
-import SideBar from './components/SideBar';
+import SideBar from './containers/SideBar';
 import ListModel from './containers/ListModel';
 
 class App extends Component {

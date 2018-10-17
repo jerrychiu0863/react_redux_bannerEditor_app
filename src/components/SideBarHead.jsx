@@ -7,7 +7,6 @@ const SideBarHead = () => {
 
     const openModel = () => {
         store.dispatch(setModel());
-        
     }
     
     return(

@@ -65,3 +65,8 @@ export const setModel = () => ({
     type: C.SET_MODEL,
     payload: ''
 })
+
+export const activeColorList = colorList => ({
+    type: C.ACTIVE_COLOR_LIST,
+    payload: colorList
+})
