@@ -2,6 +2,13 @@
     display: flex;
     height: 100px;
     border-bottom: 1px solid rgba(0,0,0,.08);
+    border-left: none;
+    cursor: pointer;
+}
+
+.ListItem__active {
+    border-left: 5px solid #007bff;
+    transition: all .2s linear;
 }
 
 .ListItem__left {
@@ -13,9 +20,10 @@
     align-items: center;
 }
 
+
 .ListItem__right {
     width: 75%;
-    height: 101.5%;
+    height: 100.5%;
 }
 
 /**********************************************/

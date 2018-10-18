@@ -3,19 +3,18 @@ import './ListItem.css';
 import store from '../store';
 import { activeColorList } from '../actions';
 
-const ListItem = ({colorList}) => {
-  
+const ListItem = ({colorList, isActive}) => {
     
     const bg = {
         backgroundImage: `linear-gradient(-${colorList.colorDegree}deg, ${colorList.color[0]}, ${colorList.color[1]})`
     }
     
     const onActiveColorList = () => {
-        store.dispatch(activeColorList(colorList));
+        store.dispatch(activeColorList(colorList, colorList.id));
     }
     
     return(
-        <div className="ListItem" onClick={() => onActiveColorList(colorList)}>
+        <div className={isActive ? "ListItem ListItem__active" : "ListItem"} onClick={() => onActiveColorList(colorList, colorList.id)}>
             <div className="ListItem__left">
                <div className="ListItem__date">
                    <span className="ListItem__date--month">{colorList.date.month}</span>
@@ -27,6 +26,7 @@ const ListItem = ({colorList}) => {
             <div className="ListItem__right" style={bg}>
                 {colorList.color}
             </div>
+            <button>Delete</button>
         </div>
     );
 }

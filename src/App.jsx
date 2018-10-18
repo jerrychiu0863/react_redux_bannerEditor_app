@@ -20,8 +20,8 @@ class App extends Component {
   render() {
     const state = store.getState();
     const { isModelOpen } = state;
-    console.log(state.isModelOpen);
     console.log(state);
+    console.log(isModelOpen);
     return (
       <div className="App">
        

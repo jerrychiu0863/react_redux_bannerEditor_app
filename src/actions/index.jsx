@@ -56,6 +56,8 @@ export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, 
     }
 })
 
+
+
 export const resetDesign = () => ({
     type: C.RESET,
     payload: ''
@@ -66,7 +68,10 @@ export const setModel = () => ({
     payload: ''
 })
 
-export const activeColorList = colorList => ({
+export const activeColorList = (colorList, colorId) => ({
     type: C.ACTIVE_COLOR_LIST,
-    payload: colorList
+    payload: {
+        colorList,
+        colorId
+    }
 })
