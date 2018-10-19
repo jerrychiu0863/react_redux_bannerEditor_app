@@ -12,6 +12,10 @@ export default function colorLists(state=[], action) {
             return state.map( s => (
                 s.id !== colorId ? {...s, isActive: false} : {...s, isActive: true}))
             
+        case C.DELETE_DESIGN:
+            const updatedLists = state.filter(s => s.id !== action.payload);
+            return updatedLists
+            
         default:
             return state
     }

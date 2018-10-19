@@ -56,7 +56,10 @@ export const saveDesign = (color, colorDegree, fontFamily, fontSize, fontColor, 
     }
 })
 
-
+export const deleteDesign = ColorId => ({
+    type: C.DELETE_DESIGN,
+    payload: ColorId
+})
 
 export const resetDesign = () => ({
     type: C.RESET,

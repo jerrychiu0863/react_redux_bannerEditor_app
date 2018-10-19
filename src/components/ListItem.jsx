@@ -1,7 +1,7 @@
 import React from 'react';
 import './ListItem.css';
 import store from '../store';
-import { activeColorList } from '../actions';
+import { activeColorList, deleteDesign } from '../actions';
 
 const ListItem = ({colorList, isActive}) => {
     
@@ -11,6 +11,11 @@ const ListItem = ({colorList, isActive}) => {
     
     const onActiveColorList = () => {
         store.dispatch(activeColorList(colorList, colorList.id));
+    }
+    
+    const onDeleteDesign = id => {
+        store.dispatch(deleteDesign(id))
+        console.log(id);
     }
     
     return(
@@ -26,7 +31,7 @@ const ListItem = ({colorList, isActive}) => {
             <div className="ListItem__right" style={bg}>
                 {colorList.color}
             </div>
-            <button>Delete</button>
+            <button onClick={() => onDeleteDesign(colorList.id)} className="ListItem__deleteBtn">Delete</button>
         </div>
     );
 }
