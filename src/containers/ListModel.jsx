@@ -4,11 +4,12 @@ import ListView from '../components/ListView';
 import store from '../store';
 import { setModel } from '../actions';
 
+
 import './ListModel.css';
 
-const ListModel = ({isModelOpen}) => {
+const ListModel = () => {
     const state = store.getState();
-    const {colorLists, activeColorList} = state;
+    const { colorLists, activeColorList, isModelOpen } = state;
         
     const getClassName = value => {
         let className = "ListModel "
@@ -27,8 +28,10 @@ const ListModel = ({isModelOpen}) => {
     }
     
     const renderListView = list => {
-        if(Object.keys(list).length === 0) {
-            return <p>none</p>
+        const { colorLists } = state;
+        
+        if(Object.keys(list).length === 0 ||  colorLists.length === 0) {
+            return <div><p>Please Click The Design On The Left To Generate CSS Code!</p></div>
         } else {
             return <ListView colorList={list} />
         }

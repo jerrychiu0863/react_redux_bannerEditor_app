@@ -27,7 +27,7 @@ class App extends Component {
        
         <View />
         <SideBar />
-        <ListModel isModelOpen={isModelOpen}/>
+        <ListModel />
         
       </div>
     );

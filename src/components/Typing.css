@@ -22,3 +22,14 @@ textarea {
     width: 180px; 
     resize: none;
 }
+
+.Typing__clearBtn {
+    width: 100%;
+    padding: 0 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.Typing__clearBtn:focus {
+    box-shadow: none;
+}

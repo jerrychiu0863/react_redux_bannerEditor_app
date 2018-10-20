@@ -25,6 +25,7 @@
 .ListItem__right {
     width: 75%;
     height: 100.5%;
+    position: relative;
 }
 
 /**********************************************/
@@ -67,15 +68,34 @@
 }
 
 /**********************************************/
+/*COLOR INFO*/
+
+.ListItem__colorInfo {
+    background-color: rgba(255,255,255,.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: #333;
+    padding: 0 5px;
+    box-shadow: 0 0 2px rgba(0,0,0,.14);
+    transition: all .2s linear;
+}
+
+.ListItem:hover .ListItem__colorInfo {
+    opacity: 1;
+}
+
+/**********************************************/
 /*BUTTON*/
 .ListItem__deleteBtn {
     cursor: pointer;
     position: absolute;
     bottom: 5px;
     right: 5px;
-    background-color: transparent;
+    padding: 3px;
+    font-size: 10px;
     opacity: 0;
-    border: 1px solid rgba(0,0,0,.14);
     transition: all .2s linear;
 }
 

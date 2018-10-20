@@ -29,9 +29,9 @@ const ListItem = ({colorList, isActive}) => {
                 <p className="ListItem__date--year">{colorList.date.year}</p>
             </div>
             <div className="ListItem__right" style={bg}>
-                {colorList.color}
+                <span className="ListItem__colorInfo">{colorList.color[0]} &rarr; {colorList.color[1]}</span>
             </div>
-            <button onClick={() => onDeleteDesign(colorList.id)} className="ListItem__deleteBtn">Delete</button>
+            <button onClick={() => onDeleteDesign(colorList.id)} className="ListItem__deleteBtn btn btn-light">Delete</button>
         </div>
     );
 }
