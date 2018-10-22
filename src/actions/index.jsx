@@ -78,3 +78,8 @@ export const activeColorList = (colorList, colorId) => ({
         colorId
     }
 })
+
+export const deleteAllDesign = () => ({
+    type: C.DELETE_ALL,
+    payload: ''
+})

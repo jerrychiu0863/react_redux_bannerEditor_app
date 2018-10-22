@@ -25,7 +25,7 @@ const Typing = ({value}) => {
                     onClick={clearTypingValue}
                     className="btn btn-outline-secondary btn-sm Typing__clearBtn"
                 >
-                    Clear
+                    Clear Text
                 </button>
             </div>
         </div>

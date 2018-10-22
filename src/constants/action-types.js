@@ -11,7 +11,8 @@ const constants = {
     SAVE_DESIGN: "SAVE_DESIGN",
     DELETE_DESIGN: " DELETE_DESIGN",
     SET_MODEL: "SET_MODEL",
-    ACTIVE_COLOR_LIST: "ACTIVE_COLOR_LIST"
+    ACTIVE_COLOR_LIST: "ACTIVE_COLOR_LIST",
+    DELETE_ALL: "DELETE_ALL"
 }
 
 export default constants;

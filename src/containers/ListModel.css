@@ -21,7 +21,7 @@
     display: flex;
     position: fixed;
     width: 800px;
-    height: 400px;
+    height: 550px;
     background-color: #f8f8f8;
     top: 50%;
     left: 50%;
@@ -33,12 +33,32 @@
     width: 350px;
     overflow: scroll;
 }
+
 .ListModel__content--right {
     width: 450px;
     height: 400px;
     padding: 10px;
 }
 
+.ListModel__empty {
+    width: 300px;
+    margin: 30% auto;
+    text-align: center;
+}
+
+.ListModel__empty img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.ListModel__empty--author {
+    font-size: 8px;
+    margin-top: 180px;
+    color: #999;
+}
+
+/*******************************************/
+/*BUTTON*/
 .ListModel__btn {
     position: fixed;
     padding-bottom: 20px;
@@ -55,3 +75,12 @@
     color: #333;
 }
 
+.deleteAllBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+}

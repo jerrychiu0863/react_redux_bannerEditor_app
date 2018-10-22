@@ -16,6 +16,9 @@ export default function colorLists(state=[], action) {
             const updatedLists = state.filter(s => s.id !== action.payload);
             return updatedLists
             
+        case C.DELETE_ALL:
+            return []
+            
         default:
             return state
     }

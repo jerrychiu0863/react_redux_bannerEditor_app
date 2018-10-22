@@ -8,23 +8,22 @@ import './Color.css';
 const Color = ({firstColor, secondColor, colorDegree}) => {
     
     const setFirstColorValue = (e) => {
-        
      store.dispatch(setFirstColor(e.target.value))
      
     }
     
     const setSecondColorValue = (e) => {
-        
-      store.dispatch(setSecondColor(e.target.value))
+     store.dispatch(setSecondColor(e.target.value))
       
     }
     
     const setColorDegreeValue = e => {
-        store.dispatch(setColorDegree(e.target.value))
+       store.dispatch(setColorDegree(e.target.value))
     }
     
     return(
         <div className="Color">
+          
            <div className="Color__header">
                <p>Color</p>
            </div>
