@@ -1,5 +1,9 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import reducer from '../reducers';
+import { save, load } from 'redux-localstorage-simple';
 
-const store = createStore(reducer);
+const createStoreWithMiddleware = applyMiddleware(save())(createStore);
+
+const store = createStoreWithMiddleware(reducer, load());
+
 export default store;
