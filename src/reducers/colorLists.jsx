@@ -5,7 +5,12 @@ export default function colorLists(state=[], action) {
         case C.SAVE_DESIGN:
             const {color, colorDegree, fontFamily, fontSize, fontColor, typing, id, date, timestamp} = action.payload;
             
-            return [...state, {color, colorDegree, fontFamily, fontSize, fontColor, typing, id, date, timestamp, isActive: false}]
+            if(typing.length === 0 ) {
+                return [...state, {color, colorDegree, fontFamily: '', fontSize: '', fontColor: '', typing: '', id, date, timestamp, isActive: false}]
+            } else {
+                return [...state, {color, colorDegree, fontFamily, fontSize, fontColor, typing, id, date, timestamp, isActive: false}]
+            }
+            
             
         case C.ACTIVE_COLOR_LIST:
             const { colorId } = action.payload;

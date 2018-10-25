@@ -4,7 +4,7 @@ import { setTyping, clearTyping } from '../actions';
 import store from '../store';
 import './Typing.css';
 
-const Typing = ({value}) => {
+const Typing = ({ value }) => {
     
     const setTypingValue = e => {
         store.dispatch(setTyping(e.target.value))
@@ -19,11 +19,16 @@ const Typing = ({value}) => {
             <div className="Typing__header">
                <p>Text</p>
             </div>
-            <textarea type="text" value={value} onChange={setTypingValue}></textarea>
+            <textarea 
+                type="text" 
+                value={value} 
+                onChange={setTypingValue}
+            >
+            </textarea>
             <div>
                 <button 
                     onClick={clearTypingValue}
-                    className="btn btn-outline-secondary btn-sm Typing__clearBtn"
+                    className="btn btn-outline-primary btn-sm Typing__clearBtn"
                 >
                     Clear Text
                 </button>

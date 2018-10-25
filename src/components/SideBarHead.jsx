@@ -3,7 +3,7 @@ import { setModel } from '../actions';
 import store from '../store';
 import './SideBarHead.css';
 
-const SideBarHead = ({colorLists}) => {
+const SideBarHead = ({ colorLists }) => {
 
     const openModel = () => {
         store.dispatch(setModel());
@@ -11,7 +11,10 @@ const SideBarHead = ({colorLists}) => {
     
     return(
         <div className="SideBarHead">
-            <button onClick={() => openModel()} className="SideBarHead__btn"><i className={colorLists.length !== 0 ? "fas fa-bookmark icon__active" : "fas fa-bookmark"}></i>
+            <button 
+            onClick={() => openModel()} className="SideBarHead__btn"
+            >
+                <i className={colorLists.length !== 0 ? "fas fa-bookmark icon__active" : "fas fa-bookmark"}></i>
             </button>
         </div>
     );

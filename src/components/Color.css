@@ -4,7 +4,7 @@
     padding: 10px;
     border: 1px solid rgba(0,0,0,.1);
     margin-bottom: 10px;
-     box-shadow: 0 2px 4px rgba(0,0,0, .08);
+    box-shadow: 0 2px 4px rgba(0,0,0, .08);
 }
 
 .Color__header {
@@ -15,6 +15,7 @@
 
 .Color__header p {
     margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 .Color__label {

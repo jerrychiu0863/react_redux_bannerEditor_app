@@ -7,7 +7,7 @@ import './SideBarFooter.css';
 const SideBarFooter = () => {
     
     const state = store.getState();
-    const {fontSizeValue, color, colorDegree, typing, fontColor, fontFamily} = state;
+    const { fontSizeValue, color, colorDegree, typing, fontColor, fontFamily } = state;
     
     const getDate = () => {
           const date = new Date();
@@ -49,8 +49,18 @@ const SideBarFooter = () => {
     
     return(
          <div className="SideBarFooter">
-           <button onClick={onSaveDesign} className="btn btn-primary btn-sm mr-2">SAVE</button>
-           <button onClick={reset} className="btn btn-outline-primary btn-sm">RESET</button> 
+           <button 
+            onClick={onSaveDesign} 
+            className="btn btn-primary btn-sm mr-2"
+           >
+             SAVE
+           </button>
+           <button 
+            onClick={reset} 
+            className="btn btn-outline-primary btn-sm"
+           >
+            RESET
+           </button> 
         </div>
     );  
 }

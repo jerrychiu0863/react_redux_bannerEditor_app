@@ -75,6 +75,10 @@
     color: #333;
 }
 
+.ListModel__btn:focus {
+    outline: none;
+}
+
 .deleteAllBtn {
     display: block;
     margin-left: auto;

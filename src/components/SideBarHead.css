@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+.SideBarHead__btn:focus {
+    outline: none;
+}
+
 .fas.fa-bookmark {
     color: #999;
     transition: all .2s linear;

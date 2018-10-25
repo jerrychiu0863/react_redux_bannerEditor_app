@@ -24,7 +24,7 @@ const View = () => {
             <div className="View__header">
                 <p>Canvas</p>
             </div>
-             <h1 style={h1Style}>{typing}</h1>
+            <h1 style={h1Style}>{typing}</h1>
 
         </div>
     );

@@ -5,7 +5,7 @@ import store from '../store';
 import { setFirstColor, setSecondColor, setColorDegree } from '../actions';
 import './Color.css';
 
-const Color = ({firstColor, secondColor, colorDegree}) => {
+const Color = ({ firstColor, secondColor, colorDegree }) => {
     
     const setFirstColorValue = (e) => {
      store.dispatch(setFirstColor(e.target.value))
@@ -25,17 +25,30 @@ const Color = ({firstColor, secondColor, colorDegree}) => {
         <div className="Color">
           
            <div className="Color__header">
-               <p>Color</p>
+               <p>background Color</p>
            </div>
            <div>
-               <p className="Color__label">Color:<input type="color" value={firstColor} onChange={setFirstColorValue} />
-                <input type="color" value={secondColor} onChange={setSecondColorValue}/> 
+               <p className="Color__label">Color:
+                   <input 
+                       type="color" 
+                       value={firstColor} 
+                       onChange={setFirstColorValue} 
+                   />
+                   <input 
+                       type="color" 
+                       value={secondColor} 
+                       onChange={setSecondColorValue} 
+                   /> 
                </p>
            </div>
            <div>
-                <p className="Color__label">Degree:<select value={colorDegree} onChange={setColorDegreeValue}>
-                {colorDegrees.map( c => <option key={c} value={c}>{c}</option>)}
-                </select>
+                <p className="Color__label">Degree:
+                    <select 
+                        value={colorDegree} 
+                        onChange={setColorDegreeValue}
+                    >
+                    {colorDegrees.map( c => <option key={c} value={c}>{c}</option>)}
+                    </select>
                 </p>
            </div>
             

@@ -5,11 +5,10 @@ import { setFontSize, setFontColor, setFontFamily } from '../actions';
 import { fontSizes, fontFamilies } from '../static-data';
 import './Font.css';
 
-const Font = ({fontSizeValue, fontColorValue, fontFamilyValue}) => {
+const Font = ({ fontSizeValue, fontColorValue, fontFamilyValue }) => {
     
     const setFontSizeValue = (e) => {
         store.dispatch(setFontSize(e.target.value));
-     
     }
     
     const setFontColorValue = e => {
@@ -29,7 +28,9 @@ const Font = ({fontSizeValue, fontColorValue, fontFamilyValue}) => {
            <div>
                <p className="Font__label">Font: 
                   <select 
-                      onChange={setFontFamilyValue} value={fontFamilyValue}>
+                      onChange={setFontFamilyValue} 
+                      value={fontFamilyValue}
+                  >
                       {fontFamilies.map( f => <option key={f} value={f}>{f}</option>)}
                   </select>
               </p>
@@ -48,7 +49,8 @@ const Font = ({fontSizeValue, fontColorValue, fontFamilyValue}) => {
                <p className="Font__label">Color:  
                    <input 
                        type="color" 
-                       onChange={setFontColorValue} value={fontColorValue} 
+                       onChange={setFontColorValue} 
+                       value={fontColorValue} 
                    />
               </p>
            </div>
